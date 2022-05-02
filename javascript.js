@@ -99,7 +99,7 @@ rollPlayer1.addEventListener("click", () => {
 
 		rollText1.style.display = "none";
 		imageContainer1.style.display = "block";
-		imagePlayer1.src = `assets/${currentRoll}.png`;
+		imagePlayer1.src = `./images/${currentRoll}.png`;
 
 		areaPlayer1.style.backgroundColor = "#313a60";
 		imageContainer1.style.backgroundColor = "#272e4d";
