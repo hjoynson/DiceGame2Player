@@ -46,7 +46,7 @@ if ((currentPlayer = 1)) {
 const winPlayer1 = () => {
 	scorePlayer1.textContent = `${player1Total} - Winner!`;
 	scorePlayer1.style.fontWeight = "bold";
-	areaPlayer1.style.backgroundColor = "#00C288";
+	areaPlayer1.style.backgroundColor = "#C7EA46";
 	imageContainer1.style.backgroundColor = "#00af7a";
 	scoreContainer1.style.backgroundColor = "#00af7a";
 	rollPlayer1.style.display = "none";
@@ -58,7 +58,7 @@ const winPlayer1 = () => {
 const losePlayer1 = () => {
 	scorePlayer1.textContent = `${player1Total} - You lost!`;
 	scorePlayer1.style.fontWeight = "bold";
-	areaPlayer1.style.backgroundColor = "#AA0039";
+	areaPlayer1.style.backgroundColor = "#EF7C24";
 	imageContainer1.style.backgroundColor = "#990033";
 	scoreContainer1.style.backgroundColor = "#990033";
 	rollPlayer1.style.display = "none";
@@ -70,7 +70,7 @@ const losePlayer1 = () => {
 const winPlayer2 = () => {
 	scorePlayer2.textContent = `${player2Total} - Winner!`;
 	scorePlayer2.style.fontWeight = "bold";
-	areaPlayer2.style.backgroundColor = "#00C288";
+	areaPlayer2.style.backgroundColor = "#C7EA46";
 	imageContainer2.style.backgroundColor = "#00af7a";
 	scoreContainer2.style.backgroundColor = "#00af7a";
 	rollPlayer2.style.display = "none";
@@ -110,7 +110,7 @@ rollPlayer1.addEventListener("click", () => {
 
 		if (player1Total >= 20) {
 			// PLAYER 1 WINS
-			body.style.backgroundColor = "#161822";
+			body.style.backgroundColor = "#FFDE00";
 			winPlayer1();
 			// PLAYER 2 LOSES
 			rollText2.textContent = "Better luck next time.";
@@ -142,7 +142,7 @@ rollPlayer2.addEventListener("click", () => {
 
 		if (player2Total >= 20) {
 			// PLAYER 2 WINS
-			body.style.backgroundColor = "#161822";
+			body.style.backgroundColor = "#FFDE00";
 			winPlayer2();
 			// PLAYER 1 LOSES
 			rollText1.textContent = "Maybe don't pass next time.";
