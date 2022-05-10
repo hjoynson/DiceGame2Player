@@ -30,14 +30,10 @@ let currentPlayer = 1;
 // WHICH PLAYER WILL ROLL FIRST
 
 if ((currentPlayer = 1)) {
-	areaPlayer1.style.backgroundColor = "#313a60";
-	imageContainer1.style.backgroundColor = "#272e4d";
-	scoreContainer1.style.backgroundColor = "#272e4d";
+
 	rollText2.textContent = "Player 1 is rolling";
 } else if ((currentPlayer = 2)) {
-	areaPlayer2.style.backgroundColor = "#313a60";
-	imageContainer2.style.backgroundColor = "#272e4d";
-	scoreContainer2.style.backgroundColor = "#272e4d";
+
 	rollText1.textContent = "Player 2 is rolling";
 }
 
@@ -46,49 +42,25 @@ if ((currentPlayer = 1)) {
 const winPlayer1 = () => {
 	scorePlayer1.textContent = `${player1Total} - Winner!`;
 	scorePlayer1.style.fontWeight = "bold";
-	areaPlayer1.style.backgroundColor = "#C7EA46";
-	imageContainer1.style.backgroundColor = "#00af7a";
-	scoreContainer1.style.backgroundColor = "#00af7a";
-	rollPlayer1.style.display = "none";
-	passPlayer1.style.display = "none";
-	playAgain1.style.display = "block";
-	playAgain1.style.backgroundColor = "#00885f";
+
 	player1Total = 0;
 };
 const losePlayer1 = () => {
 	scorePlayer1.textContent = `${player1Total} - You lost!`;
 	scorePlayer1.style.fontWeight = "bold";
-	areaPlayer1.style.backgroundColor = "#EF7C24";
-	imageContainer1.style.backgroundColor = "#990033";
-	scoreContainer1.style.backgroundColor = "#990033";
-	rollPlayer1.style.display = "none";
-	passPlayer1.style.display = "none";
-	playAgain1.style.display = "block";
-	playAgain1.style.backgroundColor = "#770028";
+
 	player1Total = 0;
 };
 const winPlayer2 = () => {
 	scorePlayer2.textContent = `${player2Total} - Winner!`;
 	scorePlayer2.style.fontWeight = "bold";
-	areaPlayer2.style.backgroundColor = "#C7EA46";
-	imageContainer2.style.backgroundColor = "#00af7a";
-	scoreContainer2.style.backgroundColor = "#00af7a";
-	rollPlayer2.style.display = "none";
-	passPlayer2.style.display = "none";
-	playAgain2.style.display = "block";
-	playAgain2.style.backgroundColor = "#00885f";
+
 	player2Total = 0;
 };
 const losePlayer2 = () => {
 	scorePlayer2.textContent = `${player2Total} - You lost!`;
 	scorePlayer2.style.fontWeight = "bold";
-	areaPlayer2.style.backgroundColor = "#AA0039";
-	imageContainer2.style.backgroundColor = "#990033";
-	scoreContainer2.style.backgroundColor = "#990033";
-	rollPlayer2.style.display = "none";
-	passPlayer2.style.display = "none";
-	playAgain2.style.display = "block";
-	playAgain2.style.backgroundColor = "#770028";
+
 	player2Total = 0;
 };
 
@@ -101,9 +73,6 @@ rollPlayer1.addEventListener("click", () => {
 		imageContainer1.style.display = "block";
 		imagePlayer1.src = `./images/${currentRoll}.png`;
 
-		areaPlayer1.style.backgroundColor = "#313a60";
-		imageContainer1.style.backgroundColor = "#272e4d";
-		scoreContainer1.style.backgroundColor = "#272e4d";
 
 		player1Total += currentRoll;
 		scorePlayer1.textContent = player1Total;
@@ -166,23 +135,13 @@ passPlayer1.addEventListener("click", () => {
 	if (currentPlayer == 1) {
 		currentPlayer = 2;
 		rollText2.textContent = "Roll your dice!";
-		areaPlayer1.style.backgroundColor = "#161822";
-		imageContainer1.style.backgroundColor = "#1b1e2b";
-		scoreContainer1.style.backgroundColor = "#1b1e2b";
-		areaPlayer2.style.backgroundColor = "#313a60";
-		imageContainer2.style.backgroundColor = "#272e4d";
-		scoreContainer2.style.backgroundColor = "#272e4d";
+	
 	}
 });
 passPlayer2.addEventListener("click", () => {
 	if (currentPlayer == 2) {
 		currentPlayer = 1;
-		areaPlayer2.style.backgroundColor = "#161822";
-		imageContainer2.style.backgroundColor = "#1b1e2b";
-		scoreContainer2.style.backgroundColor = "#1b1e2b";
-		areaPlayer1.style.backgroundColor = "#313a60";
-		imageContainer1.style.backgroundColor = "#272e4d";
-		scoreContainer1.style.backgroundColor = "#272e4d";
+	
 	}
 });
 
